@@ -13,12 +13,11 @@ tasks:
           >> ~/.bashrc
         
         # Install Neovim
-        sudo add-apt-repository ppa:neovim-ppa/stable -y
         sudo apt-get update
-        sudo apt-get install neovim -y
+        sudo apt install neovim -y
 
         # Install GNU Stow
-        sudo apt-get install stow -y
+        sudo apt install stow -y
 
         # Clone dotfiles repository (replace with your actual repository URL)
         git clone https://github.com/yourusername/dotfiles.git ~/dotfiles

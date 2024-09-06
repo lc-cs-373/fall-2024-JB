@@ -14,16 +14,12 @@ tasks:
         
         # Install Neovim
         sudo apt-get update
-        sudo apt install neovim -y
+        sudo apt-get upgrade
+        sudo apt install neovim -y > log.txt
 
         # Install GNU Stow
         sudo apt install stow -y
 
-        # Clone dotfiles repository (replace with your actual repository URL)
-        git clone https://github.com/yourusername/dotfiles.git ~/dotfiles
-
-        # Navigate to dotfiles directory and stow nvim folder
-        cd ~/dotfiles && stow nvim
 
         exec bash
 vscode:

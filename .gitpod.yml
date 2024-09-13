@@ -17,3 +17,9 @@ tasks:
 vscode:
     extensions:
         - jebbs.plantuml
+          
+additionalRepositories:
+    - url: https://github.com/Jefferson-Butler1/dotfiles
+      # checkoutLocation is optional and relative to /workspaces.
+      # by default the location defaults to the repository name.
+      checkoutLocation: dotfiles 

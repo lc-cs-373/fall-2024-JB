@@ -14,6 +14,6 @@ RUN LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygi
     rm lazygit.tar.gz
 
 # Clone dotfiles repository and use stow to set up symlinks
-RUN git clone https://github.com/yourusername/dotfiles.git $HOME/dotfiles && \
+RUN git clone https://github.com/Jefferson-Butler1/dotfiles.git $HOME/dotfiles && \
     cd $HOME/dotfiles && \
     stow */

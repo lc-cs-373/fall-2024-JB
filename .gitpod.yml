@@ -1,7 +1,8 @@
 # SPDX-FileCopyrightText: 2023 Stoney Jackson <dr.stoney@gmail.com>
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
-image: gitpod/workspace-full:latest
+image:
+  file: .gitpod.Dockerfile
 tasks:
   - name: Install PLCC
     command: |

@@ -1,9 +1,9 @@
 FROM gitpod/workspace-full
 
-USER gitpod
+# Install custom tools, runtime, etc.
 
 RUN sudo apt-get update -q && \
-    sudo apt-get install -yq redis-server neovim stow && \
+    sudo apt-get install -yq redis-server neovim stow ripgrep && \
     sudo apt-get clean && \
     sudo rm -rf /var/lib/apt/lists/*
 

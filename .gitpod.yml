@@ -3,6 +3,8 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 image:
   file: .gitpod.Dockerfile
+additionalRepositories:
+    - url: https://github.com/Jefferson-Butler1/dotfiles
 tasks:
   - name: Install PLCC
     command: |
@@ -18,8 +20,3 @@ vscode:
     extensions:
         - jebbs.plantuml
           
-additionalRepositories:
-    - url: https://github.com/Jefferson-Butler1/dotfiles
-      # checkoutLocation is optional and relative to /workspaces.
-      # by default the location defaults to the repository name.
-      checkoutLocation: dotfiles 

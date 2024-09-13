@@ -14,7 +14,6 @@ tasks:
           >> ~/.bashrc
 
         exec bash
-        source /workspace/.bashrc
 vscode:
     extensions:
         - jebbs.plantuml

@@ -4,8 +4,6 @@ FROM gitpod/workspace-full
 
 RUN sudo apt-get update -q && \
     sudo apt-get install -yq redis-server neovim stow ripgrep && \
-    sudo apt-get clean && \
-    sudo rm -rf /var/lib/apt/lists/*
 
 # Install lazygit
 RUN LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*') && \

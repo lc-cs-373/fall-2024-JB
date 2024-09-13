@@ -12,8 +12,8 @@ tasks:
           "$(\curl -fsSL https://github.com/ourPLCC/plcc/raw/main/installers/plcc/install.bash)" \
           >> ~/.bashrc
 
-        export $EDITOR=vim
         exec bash
+        source /workspace/.bashrc
 vscode:
     extensions:
         - jebbs.plantuml

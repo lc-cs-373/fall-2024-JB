@@ -1,0 +1,25 @@
+skip WS '\s+'
+skip COMMENT '#.*$'
+token THIS 'this'
+token THAT 'that'
+token THING 'thing'
+token OTHER 'other'
+token THE 'the'
+token ID '\w+'
+token ERROR '!'
+
+%
+
+<q1> ::= <word>
+<word>:This ::= THIS <word>
+<word>:That ::= THAT <word>
+<word>:Thing ::= THING <word>
+<word>:Other ::= OTHER <word>
+<word>:The ::= THE <word>
+<word>:Id ::= ID <word>
+<word>:Err ::= ERROR <word>
+
+
+
+
+

@@ -1,4 +1,5 @@
 skip WS '\s+'
+skip COMMENT '<#\w+>.+$'
 token SKIP 'skip.+$'
 token TOKEN 'token.+$'
 token DIVIDER '%'
@@ -8,3 +9,4 @@ token NONTERM '<\w+>.+$'
 <line>:Skipper ::= SKIP 
 <line>:Toker ::= TOKEN
 <line>:Diver ::= DIVIDER
+<line>:Nontermer ::= NONTERM

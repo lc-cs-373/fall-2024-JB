@@ -1,15 +1,13 @@
 skip WS '\s+'
-token COMMENT '<^#\w+>.+$'
-token SKIP 'skip.+$'
-token TOKEN 'token.+$'
-token DIVIDER '%'
-token NONTERM '<\w+>.+$'
-%
-<q2> ::= <line> 
-<line>:Commentr ::= COMMENT
-<line>:Dividerr ::= DIVIDER
-<line>:Toker ::= <tokerrr>
-<line>:Nontermer ::= NONTERM
+skip COMMENT '#.+$'
+skip DIVIDER '%'
+skip NONTERM '<\w+>.+$'
 
-<tokerrr>:Tokerrrr ::= TOKEN
-<tokerrr>:Skipperr ::= SKIP
+token SKIP 'skip.+$'
+token TOKEN '(token)?.([A-Z]).+$'
+
+%
+
+<q9> ::= <solution>
+<solution>:Skips ::= SKIP
+<solution>:Notskips ::= TOKEN

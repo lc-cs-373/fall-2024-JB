@@ -19,7 +19,3 @@ token ERROR '!'
 <word>:Id ::= ID <word>
 <word>:Err ::= ERROR <word>
 
-
-
-
-

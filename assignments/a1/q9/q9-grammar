@@ -1,0 +1,17 @@
+skip WS '\s+'
+skip COMMENT '#.+$'
+skip DIVIDER '%'
+skip NONTERM '<\w+>.+$'
+
+token SKIP 'skip.+$'
+token TOKEN 'token.([A-Z]).+$'
+token NAMELESS '([A-Z]).+$'
+
+%
+
+<q9> ::= <solution>
+<solution>:Skips ::= <SKIP>
+<solution>:Named ::= <TOKEN>
+<solution>:Notnamed ::= <NAMELESS>
+%
+%include code

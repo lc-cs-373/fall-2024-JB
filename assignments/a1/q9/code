@@ -1,0 +1,34 @@
+# class methods
+
+Q9
+%%%
+    public void $run() {
+        System.out.println(solution.toString());
+    }
+%%%
+
+Solution
+%%%
+    public abstract String toString();
+%%%
+
+Skips
+%%%
+    public String toString(){
+     return skip.toString();
+    }
+%%%
+
+Named
+%%%
+    public String toString(){
+     return token.toString();
+    }
+%%%
+
+Notnamed
+%%%
+    public String toString(){
+     return "token " + nameless.toString();
+    }
+%%%

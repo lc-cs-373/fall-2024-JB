@@ -1,5 +1,5 @@
 skip WS '\s+'
-token COMMENT '<^#\w+>.+$'
+token COMMENT '#.+$'
 token SKIP 'skip.+$'
 token TOKEN 'token.+$'
 token DIVIDER '%'

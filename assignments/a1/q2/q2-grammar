@@ -1,9 +1,10 @@
 skip WS '\s+'
-skip COMMENT '<#\w+>.+$'
+skip COMMENT '#.+$'
+skip DIVIDER '%'
 token SKIP 'skip.+$'
 token TOKEN 'token.+$'
-token DIVIDER '%'
 token NONTERM '<\w+>.+$'
+#this is a comment
 %
 <q2> ::= <line> 
 <line>:Skipper ::= SKIP 

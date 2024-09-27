@@ -1,0 +1,23 @@
+   1: SKIP 'skip WS '\s+'
+'
+   2: SKIP 'skip COMMENT '<#\w+>.+$'
+'
+   3: TOKEN 'token SKIP 'skip.+$'
+'
+   4: TOKEN 'token TOKEN 'token.+$'
+'
+   5: TOKEN 'token DIVIDER '%'
+'
+   6: TOKEN 'token NONTERM '<\w+>.+$'
+'
+   7: DIVIDER '%'
+   8: NONTERM '<q2> ::= <line> 
+'
+   9: NONTERM '<line>:Skipper ::= SKIP 
+'
+  10: NONTERM '<line>:Toker ::= TOKEN
+'
+  11: NONTERM '<line>:Diver ::= DIVIDER
+'
+  12: NONTERM '<line>:Nontermer ::= NONTERM
+'

@@ -14,7 +14,6 @@ NUM '\d+'
 <nums>:NumsNull ::=
 
 %
-
 # Semantic specification
 #
 # Add a `toString` method to the `Lon` class
@@ -23,6 +22,10 @@ Lon
     public void $run() {
         int m = min();
         System.out.println("" + m);
+    }
+
+    public String toString() {
+      return num.toString() + nums.toString();
     }
 
     public int min() {
@@ -34,18 +37,28 @@ Lon
 Nums
 %%%
     public abstract int min(int minSoFar);
+    public abstract String toString();
 %%%
 
 NumsNode
 %%%
     public int min(int minSoFar) {
-        return 0; // This is just a stub. Replace it with your implementation.
+      int minPast= Math.min( minSoFar, Integer.parseInt(num.toString()));
+      return Math.min(minPast, nums.min(minPast));
     }
+
+    public String toString(){
+      return num.toString() + nums.toString();
+    }
+
 %%%
 
 NumsNull
 %%%
     public int min(int minSoFar) {
-        return 0; // This is just a stub. Replace it with your implementation.
+        return Integer.MAX_VALUE; 
+    }
+    public String toString(){
+      return "";
     }
 %%%

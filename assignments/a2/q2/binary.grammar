@@ -1,12 +1,71 @@
 # BINARY
 # Lexical specification
 
+NL '\n'
+ZERO '0'
+ONE '1'
+
 %
 
 # Syntactic specification
-<start> ::= <bits> NL
-<bits>  **= <bit>
+<start> ::= <bit> NL
+<bit>:Zero ::= <ZERO> <bit>
+<bit>:One ::= <ONE> <bit>
+<bit>:None ::= 
 
 %
+
+Start
+%%%
+
+    public void $run() {
+        int m = bit.eval("");
+        System.out.println(m);
+    }
+
+%%%
+
+Bit
+%%%
+
+    public abstract int eval(String prev);
+
+%%%
+
+Zero
+%%%
+
+    public int eval(String prev){
+      return bit.eval(prev + "0");
+    }
+
+%%%
+
+One
+%%%
+
+    public int eval(String prev){
+      return bit.eval(prev + "1");
+    }
+
+%%%
+
+None
+%%%
+
+    public int eval(String prev){
+        //convert the accumulated binary string to a decimal int
+        if(prev.length() == 0) throw new PLCCException("Please enter a binary number");
+        int result = 0;
+        for (int i = 0; i < prev.length(); i++){
+            if(prev.charAt(prev.length() - 1 - i) == '1'){
+              result += Math.pow(2, i);
+            }
+        }
+        return result;
+
+    }
+
+%%%
 
 # Semantic specification

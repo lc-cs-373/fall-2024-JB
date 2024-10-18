@@ -1,0 +1,4 @@
+let
+    f = macro(t) if t then *(t, .f(sub1(t))) else 1
+in
+    .f(5) % returns 120

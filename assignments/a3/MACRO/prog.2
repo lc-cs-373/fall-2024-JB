@@ -1,0 +1,10 @@
+let
+    x = 3
+in
+    let
+        m = macro(t) +(t, x)
+    in
+        let
+            x = 42
+        in
+            .m(5)

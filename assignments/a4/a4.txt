@@ -28,7 +28,11 @@ d. NEED
 2
 
 
-QUESTION 3
 
 QUESTION 5
 [int => int]
+
+
+QUESTION 6
+add1(0) is an int not a boolean
+p is a [=> int] not an int
